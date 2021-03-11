@@ -58,16 +58,56 @@
 		694E0C8225FA4EA90001040D /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				694E0C8325FA4EA90001040D /* AppDelegate.swift */,
-				694E0C8525FA4EA90001040D /* SceneDelegate.swift */,
-				694E0C8725FA4EA90001040D /* ViewController.swift */,
-				694E0C8925FA4EA90001040D /* Main.storyboard */,
-				694E0C8F25FA4EAF0001040D /* Assets.xcassets */,
-				694E0C9125FA4EAF0001040D /* LaunchScreen.storyboard */,
-				694E0C9425FA4EB00001040D /* Info.plist */,
-				694E0C8C25FA4EAA0001040D /* Notes.xcdatamodeld */,
+				694E0C9D25FA50930001040D /* Models */,
+				694E0C9E25FA509D0001040D /* Views */,
+				694E0C9F25FA50AC0001040D /* Controllers */,
+				694E0C9B25FA50500001040D /* Resources */,
+				694E0C9C25FA50600001040D /* Supporting Files */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		694E0C9B25FA50500001040D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				694E0C8F25FA4EAF0001040D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		694E0C9C25FA50600001040D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				694E0C8325FA4EA90001040D /* AppDelegate.swift */,
+				694E0C8525FA4EA90001040D /* SceneDelegate.swift */,
+				694E0C9125FA4EAF0001040D /* LaunchScreen.storyboard */,
+				694E0C9425FA4EB00001040D /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		694E0C9D25FA50930001040D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				694E0C8C25FA4EAA0001040D /* Notes.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		694E0C9E25FA509D0001040D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				694E0C8925FA4EA90001040D /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		694E0C9F25FA50AC0001040D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				694E0C8725FA4EA90001040D /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +332,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJN9TW8RPS;
-				INFOPLIST_FILE = Notes/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Notes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +351,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJN9TW8RPS;
-				INFOPLIST_FILE = Notes/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Notes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
