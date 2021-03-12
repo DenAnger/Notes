@@ -14,6 +14,8 @@
 		694E0C8E25FA4EAA0001040D /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 694E0C8C25FA4EAA0001040D /* Notes.xcdatamodeld */; };
 		694E0C9025FA4EAF0001040D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 694E0C8F25FA4EAF0001040D /* Assets.xcassets */; };
 		694E0C9325FA4EAF0001040D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694E0C9125FA4EAF0001040D /* LaunchScreen.storyboard */; };
+		69F6C55225FB24D200C0D753 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6C55125FB24D200C0D753 /* MainTableViewController.swift */; };
+		69F6C55625FB28C900C0D753 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6C55525FB28C900C0D753 /* NoteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		694E0C8F25FA4EAF0001040D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		694E0C9225FA4EAF0001040D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		694E0C9425FA4EB00001040D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69F6C55125FB24D200C0D753 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		69F6C55525FB28C900C0D753 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				694E0C8925FA4EA90001040D /* Main.storyboard */,
+				69F6C55525FB28C900C0D753 /* NoteCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 		694E0C9F25FA50AC0001040D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				69F6C55125FB24D200C0D753 /* MainTableViewController.swift */,
 				694E0C8725FA4EA90001040D /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -183,6 +189,8 @@
 				694E0C8825FA4EA90001040D /* ViewController.swift in Sources */,
 				694E0C8425FA4EA90001040D /* AppDelegate.swift in Sources */,
 				694E0C8625FA4EA90001040D /* SceneDelegate.swift in Sources */,
+				69F6C55625FB28C900C0D753 /* NoteCell.swift in Sources */,
+				69F6C55225FB24D200C0D753 /* MainTableViewController.swift in Sources */,
 				694E0C8E25FA4EAA0001040D /* Notes.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
