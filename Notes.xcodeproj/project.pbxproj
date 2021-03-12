@@ -17,6 +17,7 @@
 		69F6C55225FB24D200C0D753 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6C55125FB24D200C0D753 /* MainTableViewController.swift */; };
 		69F6C55625FB28C900C0D753 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6C55525FB28C900C0D753 /* NoteCell.swift */; };
 		69F6C55A25FB300100C0D753 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6C55925FB300100C0D753 /* DetailViewController.swift */; };
+		69F6C55E25FB372200C0D753 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6C55D25FB372200C0D753 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		69F6C55125FB24D200C0D753 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		69F6C55525FB28C900C0D753 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		69F6C55925FB300100C0D753 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		69F6C55D25FB372200C0D753 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				694E0C8C25FA4EAA0001040D /* Notes.xcdatamodeld */,
+				69F6C55D25FB372200C0D753 /* Note.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				694E0C8825FA4EA90001040D /* CreateViewController.swift in Sources */,
 				694E0C8425FA4EA90001040D /* AppDelegate.swift in Sources */,
 				694E0C8625FA4EA90001040D /* SceneDelegate.swift in Sources */,
+				69F6C55E25FB372200C0D753 /* Note.swift in Sources */,
 				69F6C55625FB28C900C0D753 /* NoteCell.swift in Sources */,
 				69F6C55225FB24D200C0D753 /* MainTableViewController.swift in Sources */,
 				694E0C8E25FA4EAA0001040D /* Notes.xcdatamodeld in Sources */,
