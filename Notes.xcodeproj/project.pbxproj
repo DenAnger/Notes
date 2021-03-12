@@ -19,6 +19,7 @@
 		69F6C55A25FB300100C0D753 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6C55925FB300100C0D753 /* DetailViewController.swift */; };
 		69F6C55E25FB372200C0D753 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6C55D25FB372200C0D753 /* Note.swift */; };
 		69F6C56725FB3E6200C0D753 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6C56625FB3E6200C0D753 /* CoreDataHelper.swift */; };
+		69F6C56A25FBA47600C0D753 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6C56925FBA47600C0D753 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		69F6C55925FB300100C0D753 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		69F6C55D25FB372200C0D753 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		69F6C56625FB3E6200C0D753 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		69F6C56925FBA47600C0D753 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				69F6C56625FB3E6200C0D753 /* CoreDataHelper.swift */,
+				69F6C56925FBA47600C0D753 /* DateHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				694E0C8625FA4EA90001040D /* SceneDelegate.swift in Sources */,
 				69F6C55E25FB372200C0D753 /* Note.swift in Sources */,
 				69F6C55625FB28C900C0D753 /* NoteCell.swift in Sources */,
+				69F6C56A25FBA47600C0D753 /* DateHelper.swift in Sources */,
 				69F6C55225FB24D200C0D753 /* MainTableViewController.swift in Sources */,
 				69F6C56725FB3E6200C0D753 /* CoreDataHelper.swift in Sources */,
 				694E0C8E25FA4EAA0001040D /* Notes.xcdatamodeld in Sources */,

@@ -74,8 +74,7 @@ class CoreDataHelper {
     
     static func readNote(read: UUID, context: NSManagedObjectContext) -> Note? {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteData")
-        let noteIDPredicate = NSPredicate(format: "noteID = %@",
-                                          read as CVarArg)
+        let noteIDPredicate = NSPredicate(format: "noteID = %@", read as CVarArg)
         fetchRequest.predicate = noteIDPredicate
         
         do {
