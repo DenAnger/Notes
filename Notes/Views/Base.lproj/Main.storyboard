@@ -72,17 +72,51 @@
             </objects>
             <point key="canvasLocation" x="-120.28985507246378" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Create View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CreateViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVN-sZ-wHQ">
+                                <rect key="frame" x="190" y="842" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter a text." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KVN-y3-Gb4">
+                                <rect key="frame" x="10" y="142" width="394" height="690"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZL-Dh-r94">
+                                <rect key="frame" x="10" y="98" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CZL-Dh-r94" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="R11-ht-oa9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KVN-y3-Gb4" secondAttribute="trailing" constant="10" id="VOJ-qA-Bi3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CZL-Dh-r94" secondAttribute="trailing" constant="10" id="WPn-br-UcT"/>
+                            <constraint firstItem="dVN-sZ-wHQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="giM-x1-JAj"/>
+                            <constraint firstItem="dVN-sZ-wHQ" firstAttribute="top" secondItem="KVN-y3-Gb4" secondAttribute="bottom" constant="10" id="gmK-P3-HwI"/>
+                            <constraint firstItem="KVN-y3-Gb4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="mA1-4V-SYo"/>
+                            <constraint firstItem="dVN-sZ-wHQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="qQA-yr-5uT"/>
+                            <constraint firstItem="KVN-y3-Gb4" firstAttribute="top" secondItem="CZL-Dh-r94" secondAttribute="bottom" constant="10" id="xFb-HW-a2a"/>
+                            <constraint firstItem="CZL-Dh-r94" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="yFG-vd-Gr0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vZ9-xc-CRV"/>
+                    <connections>
+                        <outlet property="createTextView" destination="KVN-y3-Gb4" id="coD-no-Sik"/>
+                        <outlet property="saveButton" destination="dVN-sZ-wHQ" id="vM9-aO-QtR"/>
+                        <outlet property="titleTextField" destination="CZL-Dh-r94" id="akl-vX-gkd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,6 +142,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
