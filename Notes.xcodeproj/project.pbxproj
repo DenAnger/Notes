@@ -16,6 +16,7 @@
 		694E0C9325FA4EAF0001040D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694E0C9125FA4EAF0001040D /* LaunchScreen.storyboard */; };
 		69F6C55225FB24D200C0D753 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6C55125FB24D200C0D753 /* MainTableViewController.swift */; };
 		69F6C55625FB28C900C0D753 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6C55525FB28C900C0D753 /* NoteCell.swift */; };
+		69F6C55A25FB300100C0D753 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6C55925FB300100C0D753 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		694E0C9425FA4EB00001040D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69F6C55125FB24D200C0D753 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		69F6C55525FB28C900C0D753 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		69F6C55925FB300100C0D753 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				69F6C55125FB24D200C0D753 /* MainTableViewController.swift */,
 				694E0C8725FA4EA90001040D /* CreateViewController.swift */,
+				69F6C55925FB300100C0D753 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				69F6C55625FB28C900C0D753 /* NoteCell.swift in Sources */,
 				69F6C55225FB24D200C0D753 /* MainTableViewController.swift in Sources */,
 				694E0C8E25FA4EAA0001040D /* Notes.xcdatamodeld in Sources */,
+				69F6C55A25FB300100C0D753 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
