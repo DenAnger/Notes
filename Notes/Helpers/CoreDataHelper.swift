@@ -50,9 +50,9 @@ class CoreDataHelper {
         }
     }
     
-    static func deleteNote(delete: UUID, context: NSManagedObjectContext) {
+    static func deleteNote(deleted: UUID, context: NSManagedObjectContext) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteData")
-        let noteID = delete as CVarArg
+        let noteID = deleted as CVarArg
         let noteIDPredicate = NSPredicate(format: "noteID = %@", noteID)
         fetchRequest.predicate = noteIDPredicate
         
