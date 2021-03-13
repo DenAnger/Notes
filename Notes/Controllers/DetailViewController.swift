@@ -12,17 +12,34 @@ class DetailViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var noteTextView: UITextView!
     
+    var detailItem: Note? {
+        didSet {
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard segue.identifier == "changeNote" else { return }
+        let changeNoteViewController = segue.destination as! CreateViewController
+        if let detail = detailItem {
+            changeNoteViewController.setChangingNote(changingNote: detail)
+        }
     }
-    */
+    
+    // MARK: - Methods
+    
+    func configureView() {
+        guard let detail = detailItem else { return }
+        if let topicLabel = titleLabel,
+           let textView = noteTextView {
+            topicLabel.text = detail.noteTitle
+            textView.text = detail.noteText
+        }
+    }
 }

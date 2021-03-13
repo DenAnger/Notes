@@ -66,6 +66,17 @@ class MainTableViewController: UITableViewController {
         return 50
     }
     
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "detailNote" else { return }
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let object = Storage.storage.readNote(at: indexPath.row)
+            let controller = segue.destination as! DetailViewController
+            controller.detailItem = object
+        }
+    }
+    
     // MARK: - Methods
     
     func configurateCoreData() {
