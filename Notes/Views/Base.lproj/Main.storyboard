@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteCell" rowHeight="50" id="IOB-oG-XjN">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteCell" rowHeight="50" id="IOB-oG-XjN" customClass="NoteCell" customModule="Notes" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IOB-oG-XjN" id="Vai-jo-Rdj">
@@ -55,6 +55,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="dateLabel" destination="rdD-UM-gGm" id="1bZ-PW-6gg"/>
+                                    <outlet property="noteTextLabel" destination="Eyh-hB-cXC" id="lCs-Of-LDm"/>
+                                    <outlet property="titleLabel" destination="tbl-s1-llB" id="tPq-BN-rir"/>
                                     <segue destination="TVA-Mp-kPa" kind="show" identifier="detailNote" id="Qbr-4Y-umq"/>
                                 </connections>
                             </tableViewCell>
@@ -200,7 +203,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Gg0-Mq-a7T"/>
+        <segue reference="z8n-BI-2qH"/>
         <segue reference="fZM-kp-xjN"/>
     </inferredMetricsTieBreakers>
     <resources>
