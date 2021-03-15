@@ -14,12 +14,13 @@ class DetailViewController: UIViewController {
     
     var detailItem: Note? {
         didSet {
-            
+            configureView()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
     }
     
     // MARK: - Navigation

@@ -51,6 +51,12 @@ class CreateViewController: UIViewController {
     
     func configurationView() {
         createTextView.delegate = self
+        
+        if let changingNote = self.changingNote {
+            titleTextField.text = changingNote.noteTitle
+            createTextView.text = changingNote.noteText
+            saveButton.isEnabled = true
+        }
     }
     
     private func addItem() {
@@ -69,7 +75,6 @@ class CreateViewController: UIViewController {
                 text: createTextView.text,
                 timeStamp: creationTimeStamp
             ))
-            
             performSegue(withIdentifier: "backToMain", sender: self)
         } else {
             let alert = UIAlertController(

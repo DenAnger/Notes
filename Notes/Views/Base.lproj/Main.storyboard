@@ -100,7 +100,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Example text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h0I-ut-maD">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h0I-ut-maD">
                                 <rect key="frame" x="10" y="56" width="394" height="702"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -147,7 +147,7 @@
                                     <action selector="saveButtonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Azq-OO-4Nx"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter a text." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KVN-y3-Gb4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter a text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KVN-y3-Gb4">
                                 <rect key="frame" x="10" y="54" width="394" height="704"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
