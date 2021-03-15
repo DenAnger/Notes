@@ -51,8 +51,11 @@ class CreateViewController: UIViewController {
     
     func configurationView() {
         createTextView.delegate = self
+        createTextView.text = "Введите текст заметки"
+        createTextView.textColor = .lightGray
         
         if let changingNote = self.changingNote {
+            createTextView.textColor = .black
             titleTextField.text = changingNote.noteTitle
             createTextView.text = changingNote.noteText
             saveButton.isEnabled = true
@@ -102,6 +105,13 @@ extension CreateViewController: UITextViewDelegate {
             } else {
                 saveButton.isEnabled = true
             }
+        }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == .lightGray {
+            textView.text = nil
+            textView.textColor = .black
         }
     }
 }
