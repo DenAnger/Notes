@@ -7,8 +7,8 @@
 
 import UIKit
 
-class NoteCell: UITableViewCell {
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var noteTextLabel: UILabel!
-    @IBOutlet var dateLabel: UILabel!
+final class NoteCell: UITableViewCell {
+	@IBOutlet var titleLabel: UILabel!
+	@IBOutlet var noteTextLabel: UILabel!
+	@IBOutlet var dateLabel: UILabel!
 }
