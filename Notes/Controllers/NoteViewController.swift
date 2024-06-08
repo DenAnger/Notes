@@ -7,52 +7,88 @@
 
 import UIKit
 
-final class CreateViewController: UIViewController {
-	@IBOutlet var titleTextField: UITextField!
-	@IBOutlet var createTextView: UITextView!
-	@IBOutlet var saveButton: UIButton!
+final class NoteViewController: UIViewController {
+	
+	// MARK: UI Elements
+	
+	@IBOutlet private var titleTextField: UITextField!
+	@IBOutlet private var createTextView: UITextView!
+	@IBOutlet private var saveButton: UIButton!
+	
+	// MARK: Properties
 	
 	private let creationTimeStamp: Int64 = Date().toSeconds()
 	private(set) var changingNote: Note?
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		configurationView()
+	var detailItem: Note? {
+		didSet {
+			configureDetailItem()
+		}
 	}
 	
-	// MARK: - Actions
+	// MARK: Life cycle
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		setup()
+		configureDetailItem()
+	}
+	
+	func configureDetailItem() {
+		guard let detail = detailItem else {
+			return
+		}
+		
+		if let topicLabel = titleTextField,
+		   let textView = createTextView {
+			topicLabel.text = detail.noteTitle
+			textView.text = detail.noteText
+			createTextView.textColor = .black
+		}
+	}
+}
+
+// MARK: - Actions
+
+extension NoteViewController {
 	
 	@IBAction func titleChanged(_ sender: UITextField, forEvent event: UIEvent) {
 		if self.changingNote != nil {
 			saveButton.isEnabled = true
 		} else {
-			if sender.text?.isEmpty ?? true || createTextView.text?.isEmpty ?? true {
-				saveButton.isEnabled = false
-			} else {
-				saveButton.isEnabled = true
-			}
+			let titleIsEmpty = sender.text?.isEmpty ?? true
+			let textViewIsEmpty = createTextView.text?.isEmpty ?? true
+			saveButton.isEnabled = !(titleIsEmpty && textViewIsEmpty)
 		}
 	}
 	
 	@IBAction func saveButtonClicked(_ sender: UIButton, forEvent event: UIEvent) {
-		if self.changingNote != nil {
+		if detailItem != nil {
+			changingNote = detailItem
 			changeItem()
 		} else {
 			addItem()
 		}
+		navigationController?.popViewController(animated: true)
 	}
-	
-	// MARK: - Methods
-	
+}
+
+// MARK: - Methods
+
+extension NoteViewController {
 	func setChangingNote(changingNote: Note) {
 		self.changingNote = changingNote
 	}
-	
-	func configurationView() {
+}
+
+// MARK: - Private Methods
+
+private extension NoteViewController {
+	func setup() {
 		createTextView.delegate = self
 		createTextView.text = "Введите текст заметки"
 		createTextView.textColor = .lightGray
-		
+
 		if let changingNote = self.changingNote {
 			createTextView.textColor = .black
 			titleTextField.text = changingNote.noteTitle
@@ -61,15 +97,14 @@ final class CreateViewController: UIViewController {
 		}
 	}
 	
-	private func addItem() {
+	func addItem() {
 		let note = Note(title: titleTextField.text!,
 						text: createTextView.text,
 						timeStamp: creationTimeStamp)
 		Storage.storage.addNote(added: note)
-		performSegue(withIdentifier: "backToMain", sender: self)
 	}
 	
-	private func changeItem() {
+	func changeItem() {
 		if let changingNote = self.changingNote {
 			Storage.storage.changeNote(changed: Note(
 				id: changingNote.noteID,
@@ -77,7 +112,6 @@ final class CreateViewController: UIViewController {
 				text: createTextView.text,
 				timeStamp: creationTimeStamp
 			))
-			performSegue(withIdentifier: "backToMain", sender: self)
 		} else {
 			let alert = UIAlertController(
 				title: "Unexpected error",
@@ -85,7 +119,6 @@ final class CreateViewController: UIViewController {
 				preferredStyle: .alert)
 			
 			alert.addAction(UIAlertAction(title: "Ok", style: .default) { (_) in
-				self.performSegue(withIdentifier: "backToMain", sender: self)
 			})
 			self.present(alert, animated: true)
 		}
@@ -94,7 +127,7 @@ final class CreateViewController: UIViewController {
 
 // MARK: - Text View Delegate
 
-extension CreateViewController: UITextViewDelegate {
+extension NoteViewController: UITextViewDelegate {
 	func textViewDidChange(_ textView: UITextView) {
 		if self.changingNote != nil {
 			saveButton.isEnabled = true
